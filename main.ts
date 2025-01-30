@@ -9,7 +9,6 @@ const MONGO_URL = Deno.env.get("MONGO_URL");
 if (!MONGO_URL) {
   throw new Error("Please provide a MONGO_URL");
 }
-
 const mongoClient = new MongoClient(MONGO_URL);
 await mongoClient.connect();
 console.info("Connected to MongoDB");
